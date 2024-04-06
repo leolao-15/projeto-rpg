@@ -40,7 +40,7 @@ class _PrincipalExampleState extends State<PrincipalExample> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.purple,
         title: const Text('RPG'),
       ),
       body: Container(
