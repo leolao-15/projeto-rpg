@@ -105,17 +105,35 @@ class _PrincipalExampleState extends State<PrincipalExample> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const ShadowPage(),
+                          builder: (context) => const SalazarPage(),
                         ),
                       );
                     },
-                    child: const Text('Shadow'),
+                    child: const Text('Salazar'),
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.grey,
+                      backgroundColor: Colors.pinkAccent,
+                      textStyle: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const IluvatarPage(),
+                        ),
+                      );
+                    },
+                    child: const Text('Iluvatar'),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.yellow,
                       textStyle: TextStyle(color: Colors.white),
                     ),
                   ),
                 ],
+              ),
+              SizedBox(
+                child: Text('Próximos personagens (away)'),
               )
             ],
           ),
@@ -145,11 +163,16 @@ class LeomirPage extends StatelessWidget {
   @override
   Widget build(context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.tealAccent,
-          title: const Text('Leomir'),
-        ),
-        body: Column(children: [Text('História do Leomir')]));
+      appBar: AppBar(
+        backgroundColor: Colors.tealAccent,
+        title: const Text('Leomir'),
+      ),
+      body: Column(
+        children: [
+          Text('História do Leomir'),
+        ],
+      ),
+    );
   }
 }
 
@@ -159,11 +182,16 @@ class MasonPage extends StatelessWidget {
   @override
   Widget build(context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.red,
-          title: const Text('Mason'),
-        ),
-        body: Column(children: [Text('História do Mason')]));
+      appBar: AppBar(
+        backgroundColor: Colors.red,
+        title: const Text('Mason'),
+      ),
+      body: Column(
+        children: [
+          Text('História do Mason'),
+        ],
+      ),
+    );
   }
 }
 
@@ -173,12 +201,59 @@ class ShadowPage extends StatelessWidget {
   @override
   Widget build(context) {
     return Scaffold(
-        appBar: AppBar(
-            backgroundColor: Colors.grey,
-            title: const Text(
-              'Shadow',
-              style: TextStyle(color: Colors.black),
-            )),
-        body: Column(children: [Text('História do Shadow')]));
+      appBar: AppBar(
+          backgroundColor: Colors.grey,
+          title: const Text(
+            'Shadow',
+            style: TextStyle(color: Colors.black),
+          )),
+      body: Column(
+        children: [
+          Text('História do Shadow'),
+        ],
+      ),
+    );
+  }
+}
+
+class SalazarPage extends StatelessWidget {
+  const SalazarPage({super.key});
+
+  @override
+  Widget build(context) {
+    return Scaffold(
+      appBar: AppBar(
+          backgroundColor: Colors.pinkAccent,
+          title: const Text(
+            'Salazar',
+            style: TextStyle(color: Colors.black),
+          )),
+      body: Column(
+        children: [
+          Text('História do Salazar'),
+        ],
+      ),
+    );
+  }
+}
+
+class IluvatarPage extends StatelessWidget {
+  const IluvatarPage({super.key});
+
+  @override
+  Widget build(context) {
+    return Scaffold(
+      appBar: AppBar(
+          backgroundColor: Colors.yellow,
+          title: const Text(
+            'Iluvatar',
+            style: TextStyle(color: Colors.black),
+          )),
+      body: Column(
+        children: [
+          Text('História do Iluvatar'),
+        ],
+      ),
+    );
   }
 }
